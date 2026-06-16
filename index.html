@@ -3,61 +3,105 @@
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><div Darwin=""></div>'s Website</title>
+    <title>Darwin's Website</title>
     <style>
-      body { font-family: Arial, sans-serif; max-width: 800px;
-             margin: 0 auto; padding: 20px; background: #f5f5f5; }
-      h1   { color: #1F4E79; }
-      h2   { color: #2E75B6; border-bottom: 2px solid #2E75B6; }
-      p    { line-height: 1.6; }
-    </style>
-  </head>
-  <body>
-    
-<h1>Hi, I am Darwin <div Darwin=""></div>!</h1>
-    <h2>About Me</h2>
-   <p> I am 16 years old also ecuadorian and 5 foot 9 inches and used to play in a soccer team all throughout freshamn year</p>
-    <h2>My Interests</h2>
-    <p> I enjoy playing soccer and video games</p>
- 
-    <h2>My Goals for This Course</h2>
-    <p>My goal is to learn more about engineering and hopefully have a future in the engineering field</p>
- 
-    <h2>My GitHub</h2>
-    <p>Check out my projects: 
-      <a href="https://github.com/[your-username]"><div Darwin24244=""></div></a>
-    </p>
-  </body>
-</html>
+      /* Layout & Background Styles */
+      body { 
+        font-family: Arial, sans-serif; 
+        max-width: 800px;
+        margin: 0 auto; 
+        padding: 20px; 
+        background-color: #E0F2FE; /* Light baby blue */
+        color: #000000; /* Black text */
+        transition: background-color 0.3s, color 0.3s;
+      }
+      
+      .container {
+        background: rgba(255, 255, 255, 0.4); /* Subtle overlay for readability */
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+      }
+
+      /* Typography */
+      h1 { color: #000000; margin-top: 0; }
+      h2 { color: #000000; border-bottom: 2px solid #000000; padding-bottom: 5px; }
+      p, li { line-height: 1.6; }
+      a { color: #1D4ED8; font-weight: bold; }
+      a:hover { color: #1E40AF; }
+
+      /* Theme Button Styles */
+      .theme-btn {
+        float: right;
+        padding: 10px 15px;
+        background-color: #000000;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+      }
+      .theme-btn:hover {
+        background-color: #333333;
+      }
+
+      /* Dark Theme Overrides */
+      body.dark-theme {
+        background-color: #0F172A; /* Dark navy */
+        color: #FFFFFF; /* White text */
+      }
+      body.dark-theme h1, 
+      body.dark-theme h2 {
+        color: #FFFFFF;
+        border-bottom-color: #FFFFFF;
+      }
+      body.dark-theme .theme-btn {
+        background-color: #FFFFFF;
+        color: #000000;
+      }
+      body.dark-theme a {
+        color: #60A5FA;
+      }
     </style>
   </head>
   <body class="light-theme">
 
     <div class="container">
-      <!-- Toggle Button inside the card -->
-      <button id="theme-toggle" class="theme-btn">Switch Theme</button>
+      <!-- Theme Toggle Button -->
+      <button id="theme-toggle" class="theme-btn">Dark Mode</button>
+      
+      <!-- Introduction Section -->
+      <h1>Hi, I am Darwin!</h1>
+      
+      <h2>About Me</h2>
+      <p>I am 16 years old, Ecuadorian, and 5 foot 9 inches. I used to play on a soccer team all throughout freshman year.</p>
+      
+      <h2>My Interests</h2>
+      <p>I enjoy playing soccer and video games.</p>
+   
+      <h2>My Goals for This Course</h2>
+      <p>My goal is to learn more about engineering and hopefully have a future in the engineering field.</p>
+   
+      <!-- Projects Section -->
       <h2>My Projects</h2>
       <p>Check out my projects:</p>
-
-    </ui>
-
+      <ul>
         <li>
           <a href="https://studio.code.org/projects/applab/a8f5c905-4fd5-427c-8f51-e4cdf4a25569"
              target="_blank" rel="noopener noreferrer">
              Code.org App Lab Project
           </a>
         </li>
-
         <li>
           <a href="https://github.com/Darwin24244"
              target="_blank" rel="noopener noreferrer">
-             GitHub Account
+             GitHub Account (Darwin24244)
           </a>
         </li>
       </ul>
     </div>
 
-    <!-- 3. JAVASCRIPT SWITCHER -->
+    <!-- Theme Switcher JavaScript -->
     <script>
       const toggleButton = document.getElementById('theme-toggle');
       const bodyElement = document.body;
